@@ -1,0 +1,11 @@
+server:
+  port: ${PRODUCT_SERVICE_PORT:8080}
+  servlet:
+    context-path: /product-service
+
+spring:
+  application:
+    name: product-service
+  data:
+    mongodb:
+      uri: mongodb://${HOST_URL:localhost}:27017/product-service

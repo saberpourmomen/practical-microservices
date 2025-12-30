@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: product-service-test
+  data:
+    mongodb:
+      database: product-service-test
+server:
+  port: 0
