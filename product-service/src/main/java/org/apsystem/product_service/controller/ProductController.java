@@ -5,6 +5,7 @@ import org.apsystem.product_service.dto.ProductRequest;
 import org.apsystem.product_service.dto.ProductResponse;
 import org.apsystem.product_service.service.ProductService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -29,7 +30,7 @@ public class ProductController {
 
     @PostMapping("save")
     public ResponseEntity<ProductResponse> saveProduct(@RequestBody ProductRequest request){
-        return ResponseEntity.ok(productService.save(request));
+        return ResponseEntity.status(HttpStatus.CREATED).body(productService.save(request));
     }
 
     @PutMapping("update/{id}")
