@@ -8,4 +8,4 @@ spring:
     name: product-service
   data:
     mongodb:
-      uri: mongodb://${HOST_URL:localhost}:27017/product-service
+      uri: mongodb://${HOST_URL:localhost}:${MONGO_PORT:27017}/product-service
